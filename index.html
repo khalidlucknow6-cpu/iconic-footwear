@@ -4,32 +4,44 @@
 <title>ICONIC FOOTWEAR - Lucknow</title><style>
 
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#111;
 color:white;
 text-align:center;
 }
 
-header{
-background:#000;
-padding:20px;
-font-size:30px;
-font-weight:bold;
+/* HERO IMAGE (your shop image) */
+.hero{
+height:420px;
+background:url('shop-banner.jpg') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-shadow:0 0 10px rgba(0,0,0,0.7);
 }
 
-.offer{
+.hero h1{
+font-size:40px;
+margin:0;
+}
+
+.hero p{
+font-size:20px;
 background:orange;
 color:black;
-padding:10px;
-font-weight:bold;
+padding:8px 14px;
+border-radius:6px;
+margin-top:10px;
 }
 
 .products{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-padding:20px;
+padding:30px;
 }
 
 .card{
@@ -53,46 +65,33 @@ margin:10px 0;
 
 button{
 padding:10px;
-margin:5px;
 border:none;
 border-radius:5px;
+background:#25D366;
+color:white;
 cursor:pointer;
 }
 
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-</style></head><body><header>
-ICONIC FOOTWEAR
-<br>
-<small>Lucknow</small>
-</header><div class="offer">
-🔥 Special Shoes Offer
+</style></head><body><div class="hero">
+<h1>ICONIC FOOTWEAR</h1>
+<p>Ek Din Ka Offer – 1 March</p>
 </div><div class="products"><div class="card">
 <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
 <h3>Nike Running Shoes</h3>
-<p class="price">₹1999</p><button class="whatsapp"
-onclick="order('Nike Running Shoes')">
-Order on WhatsApp
-</button>
-
+<p class="price">₹1999</p>
+<button onclick="order('Nike Running Shoes')">Order on WhatsApp</button>
 </div><div class="card">
 <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77">
 <h3>Adidas Sports Shoes</h3>
-<p class="price">₹1799</p><button class="whatsapp"
-onclick="order('Adidas Sports Shoes')">
-Order on WhatsApp
-</button>
-
+<p class="price">₹1799</p>
+<button onclick="order('Adidas Sports Shoes')">Order on WhatsApp</button>
 </div></div><script>
 
 function order(product){
 
 let phone="917007416501"
 
-let message="Hello ICONIC FOOTWEAR, I want to order: "+product
+let message="Hello ICONIC FOOTWEAR, I want to order "+product
 
 let url="https://wa.me/"+phone+"?text="+encodeURIComponent(message)
 
